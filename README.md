@@ -54,5 +54,10 @@ if __name__ == __main__:
     # Please remove the test file again ;)
 ```
 
+# Testing
+I haven't really tested this very exhaustively.... D:
+
+As such: It might work, it might not, it's written pretty badly so I'm not sure I'll fix it before it gets overhauled. My apologies.
+
 # License
 MIT (Do what you want)
