@@ -16,6 +16,8 @@ It also writes your dictionaries in a sorted order, meaning that two runs with i
 
 Additionally, it writes lines in the target until it fails. This means that it might generate incomplete TOML files if you do not handle exceptions, but at the same time shows you exactly in which point it failed, and gives you an amount of debug information to work with, in case your structures were faulty to begin with.
 
+\* _With multiline strings, the output shows the right line number and offset, but the wrong 'content'... sorry_
+
 ## Note
 
 Since I tried to make this able to store more data types than what is reasonable for the specification (data structures with recursive references, like in YAML), the writer presently caches all data structures that it has written... this is probably quite inefficient for memory usage, so **Be Warned**.
@@ -27,8 +29,6 @@ I've tried my best to make it conform to the standard (even for weird strings), 
 Anyhow, this is just something I made for my own sake, so it may or may not work. 
 
 Use at your own risk :d (It shouldn't be able to mutate anything, though).
-
-\* _With multiline strings, the output shows the right line number and offset, but the wrong 'content'... sorry_
 
 
 # Usage
