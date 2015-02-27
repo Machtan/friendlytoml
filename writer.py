@@ -32,7 +32,6 @@ class TomlWriter:
         ord("\n"): "\\n", 
         ord("\f"): "\\f", 
         ord("\r"): "\\r", 
-        ord("/"): "\\/", 
         ord("\\"): "\\\\"
     }
     simpletypes = {

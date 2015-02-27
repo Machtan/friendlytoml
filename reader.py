@@ -83,6 +83,17 @@ def tokenize(iterable):
                 
                 # Array scope
                 elif array_nesting:
+                    # Comment
+                    if char == "#":
+                        # Close the token
+                        yield_current()
+                        # Yield everything from this on
+                        current.append(line[start:])
+                        yield_current()
+
+                        # Go to the next line
+                        offset = line_length
+                        continue
                     # String
                     if (char == '"') or (char == "'"):
                         string_scope = True
@@ -101,7 +112,9 @@ def tokenize(iterable):
                         
                         # Make sure to add the string identifying char
                         else:
+                            offset += 1
                             current.append(char)
+                            continue
                             
                     # Change the array scope
                     if char == "[" or char == "]":
